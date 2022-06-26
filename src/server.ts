@@ -7,6 +7,7 @@ import authorRoutes from './routes/author.routes';
 import bookRoutes from './routes/book.routes';
 import dishRoutes from './routes/dish.routes';
 import restaurantRoutes from './routes/restaurant.routes';
+import chefRoutes from './routes/chef.routes';
 
 const router = express();
 
@@ -53,6 +54,7 @@ const startServer = () => {
     router.use('/books', bookRoutes);
     router.use('/dishes', dishRoutes);
     router.use('/restaurants', restaurantRoutes);
+    router.use('/chefs', chefRoutes);
 
     //HealthCheck - TEST
     router.get('/ping', (req, res, next) => res.status(200).json({ message: 'pong' }));
